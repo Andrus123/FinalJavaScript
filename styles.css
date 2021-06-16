@@ -1,0 +1,235 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    outline:0;
+}
+.modal{
+    position: absolute;
+    top: 26%;
+    left: 18%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 15px;
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 10px rgb(32 33 36 / 28%);
+    z-index: 10;
+    background-color: #fff;
+    width: auto;
+}
+#modal2{
+    top: 26%;
+    left: 70%;
+    width: auto;
+}
+#modal3{
+    top: 60%;
+    left: 18%;
+    height: 355px;
+}
+#modal4{
+    top: 45%;
+    left: 68%;
+}
+#modal5{
+    top: 70%;
+    left: 42%;
+}
+#modal6{
+    top: 66%;
+    left: 80%;
+    width: auto;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+header h2{
+    font-family:monospace;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 30px;
+}
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: gray;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.details{
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.200s ease;
+    border-color: rgba(223,225,229,0);
+}
+.user-details .input-box > .botons{
+    position: relative;
+    width: 31%;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.200s ease;
+    border-color: rgba(223,225,229,0);
+    cursor: pointer;
+    height: 20px;
+    font-family: monospace;
+    font-size: inherit;
+    text-align: left;
+}
+.user-details .input-box > .botons:hover{
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+.user-details .input-box input:focus{
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+.user-details .input-box input:hover{
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+@media screen and (max-width: 475px){
+    section{
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .user-details .input-box > .botons{
+        width: 63%;
+    }
+    header h2{
+        padding-left: 27px;
+    }
+    .container form .user-details {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    form .user-details .input-box {
+        margin: 20px 0 12px 0;
+        width: calc(100% / 2 - -156px);
+    }
+    .modal{
+        top: 38%;
+        left: 66%;
+    }
+    #modal2 {
+        top: 54%;
+        left: 68%;
+    }
+    #modal3 {
+        top: 73%;
+        left: 67%;
+    }
+    #modal4 {
+        top: 91%;
+        left: 68%;
+    }
+    #modal5 {
+        top: 113%;
+        left: 67%;
+    }
+    #modal6 {
+        top: 129%;
+        left: 66%;
+    }
+}

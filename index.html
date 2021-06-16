@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Laboratorio de Computación INF113</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h2>EXAMEN FINAL : LABORATORIO DE COMPUTACION INF-113</h2>
+  </header>
+  <section>
+    <div class="container">
+      <div class="title">Laboratorio de diseño y javascript</div>
+      <form action="" method="" id="formulario" name="formu">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">1.- Factorial</span><input class="botons" type="button" onclick="factor()"
+              value="generar" data-modal-target="#modal1">
+            <input type="text" id="factorial" placeholder="S: 0!+2!+4!+...+N!">
+            <div class="modal" id="modal1">
+              <div class="modal-header">
+                <div class="title">Factorial:</div>
+                <button data-close-button="modal1" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body1"></div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">2.- Generar Primos</span><input class="botons" type="button" onclick="eratosthenes()"
+              value="generar" data-modal-target="#modal2">
+            <input type="text" id="primos" placeholder="Generar números primos para n" id="generar">
+            <div class="modal" id="modal2">
+              <div class="modal-header">
+                <div class="title">Primos:</div>
+                <button data-close-button="modal2" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body2"></div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">3.- Calculadora</span><input class="botons" type="button" onclick="" value="desplegar"
+              data-modal-target="#modal3">
+            <input type="text" id="calculadora" placeholder="Calculadora" id="calculadora">
+            <div class="modal" id="modal3">
+              <div class="modal-header">
+                <div class="title">Calculadora</div>
+                <button data-close-button="modal3" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body3">
+                <table id="calculadora">
+                  <tr>
+                    <td colspan="4">
+                      <input type="text" id="valor_numero" maxlength="20" value="0">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input type="Button" id="potencia" value="exp" onclick="operar(5)">
+                    </td>
+                    <td>
+                      <input type="Button" id="Dividir" value="/"  onclick="operar(4)">
+                    </td>
+                    <td>
+                      <input type="Button" id="Multiplicar" value="x" onclick="operar(3)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="Button" id="7" value="7" onclick="darNumero('7')">
+                    </td>
+                    <td>
+                      <input type="Button" id="8" value="8" onclick="darNumero('8')">
+                    </td>
+                    <td>
+                      <input type="Button" id="9" value="9" onclick="darNumero('9')">
+                    </td>
+                    <td>
+                      <input type="Button" id="Restar" value="-" onclick="operar(2)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="Button" id="4" value="4" onclick="darNumero('4')">
+                    </td>
+                    <td>
+                      <input type="Button" id="5" value="5" onclick="darNumero('5')">
+                    </td>
+                    <td>
+                      <input type="Button" id="6" value="6" onclick="darNumero('6')">
+                    </td>
+                    <td>
+                      <input type="Button" id="Sumar" value="+" onclick="operar(1)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="Button" id="1" value="1" onclick="darNumero('1')">
+                    </td>
+                    <td>
+                      <input type="Button" id="2" value="2" onclick="darNumero('2')">
+                    </td>
+                    <td>
+                      <input type="Button" id="3" value="3" onclick="darNumero('3')">
+                    </td>
+                    <td>
+                      <input type="Button" id="EsIgual" value="=" onclick="esIgual()">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input type="Button" id="0" value="0" onclick="darNumero('0')">
+                    </td>
+                    <td>
+                      <input type="Button" id="," value="," onclick="darComa()">
+                    </td>
+                    <td>
+                      <input type="Button" id="C" value="C" onclick="darC()">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">4.- Capicua</span><input class="botons" type="button" onclick="Capicua()"
+              value="verificar" data-modal-target="#modal4">
+            <input type="text" id="capicua" placeholder="Verificar si un numero es capicua">
+            <div class="modal" id="modal4">
+              <div class="modal-header">
+                <div class="title">Capicua? </div>
+                <button data-close-button="modal4" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body4"></div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">5.- Rotación</span><input class="botons" type="button" onclick="Rotacion()"
+              value="generar" data-modal-target="#modal5">
+            <input type="text" id="rotacion" placeholder="Rotar a la derecha digitos pares > 6">
+            <div class="modal" id="modal5">
+              <div class="modal-header">
+                <div class="title">Rotacion: </div>
+                <button data-close-button="modal5" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body5"></div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">6.- Optativa</span><input class="botons" type="button"
+              onclick="genExponencial()" value="generar" data-modal-target="#modal6">
+            <input type="text" id="Factorialnormal" placeholder="Generar la serie exponencial">
+            <div class="modal" id="modal6">
+              <div class="modal-header">
+                <div class="title">Exponencial:</div>
+                <button data-close-button="modal6" class="close-button">&times;</button>
+              </div>
+              <div class="modal-body" id="modal-body6"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer id="footer">
+    <h3>Author: </h3>
+    <p>Andrés Kadir Aquin Flores</p>
+    <h3>Fecha: </h3>
+    <p>16 de Junio , 2021</p>
+  </footer>
+  <script src="scripts.js" type="text/javascript"></script>
+</body>
+
+</html>
