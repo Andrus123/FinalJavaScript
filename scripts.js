@@ -84,7 +84,7 @@ function Capicua(){
     var reverso = num.reverse();
     if(num == reverso){
         imprimir = document.createTextNode("Es Capicua");
-        document.getElementById("modal-body6").appendChild(imprimir);
+        document.getElementById("modal-body4").appendChild(imprimir);
     }else{
         imprimir = document.createTextNode("No es Capicua");
         document.getElementById("modal-body4").appendChild(imprimir);

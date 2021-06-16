@@ -89,7 +89,7 @@ header h2{
 }
 section{
     display: flex;
-    height: 78.5vh;
+    height: 76vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -186,7 +186,7 @@ form .user-details .input-box{
     background-color: rgb(29, 31, 29);
     margin: 0px;
     padding: 0px;    
-    height: 95px;
+    height: 112px;
     text-align-last: center;
     padding-top: 10px;
 }
@@ -226,27 +226,27 @@ footer h3,p{
         width: calc(100% / 2 - -156px);
     }
     .modal{
-        top: 38%;
-        left: 66%;
+        top: 34%;
+        left: 70%;
     }
     #modal2 {
-        top: 54%;
-        left: 68%;
+        top: 49%;
+        left: 70%;
     }
     #modal3 {
         top: 73%;
-        left: 67%;
+        left: 70%;
     }
     #modal4 {
-        top: 91%;
-        left: 68%;
+        top: 78%;
+        left: 74%;
     }
     #modal5 {
         top: 113%;
         left: 67%;
     }
     #modal6 {
-        top: 129%;
-        left: 66%;
+        top: 105%;
+        left: 70%;
     }
 }
